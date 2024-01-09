@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 { 
     [SerializeField] float speed;
+    [SerializeField] ParticleSystem effect;
     // Start is called before the first frame update
     
 
@@ -15,6 +16,7 @@ public class Bullet : MonoBehaviour
 
     }
     private void OnTriggerEnter2D(Collider2D collision){
+        Instantiate(effect, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 

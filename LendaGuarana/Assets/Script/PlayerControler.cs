@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class PlayerControler : MonoBehaviour
 {
+    public Heart heart;
     [SerializeField] float moveSpeed;
     Vector2 moveInput;
 
     // Start is called before the first frame update
     void Start()
     {
+        
         
     }
 
@@ -23,4 +25,15 @@ public class PlayerControler : MonoBehaviour
 
         
     }
+    private void OnTriggerEnter2D (Collider2D collision)
+    {
+        if(collision.CompareTag("Enemy")){
+            
+           heart.vida--;
+        }
+    
 }
+}
+    
+
+

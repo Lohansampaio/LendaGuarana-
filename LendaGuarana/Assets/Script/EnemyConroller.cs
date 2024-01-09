@@ -30,5 +30,6 @@ public class EnemyConroller : MonoBehaviour
             isAlive = false;
             Destroy(gameObject, 0.2f);
         }
+        
     }
 }
